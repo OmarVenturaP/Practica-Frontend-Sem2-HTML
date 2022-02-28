@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!-- 
+
+-->
+<html>
+    <head>
+        <title>Pasteleria Igor</title>
+        <link rel="icon" href="#">
+        <meta lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="./styles/estilo.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital@1&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b0ab042d33.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <ul class="nav_ul">
+                    <li class="nav_li"><i class="fa-solid fa-house"></i><a href="./pasteleria.html">INICIO</a></li>
+                    <li class="nav_li"><i class="fa-solid fa-rectangle-list"></i><a href="./menu-pasteleria.html">NUESTRO MENÚ</a></li>
+                    <li class="nav_li"><i class="fa-solid fa-receipt"></i><a href="./pedido.html">HACER PEDIDO</a></li>
+                    <li class="nav_li"><i class="fa-solid fa-utensils"></i><a href="./pastelero.html">SOY PASTELERO</a></li>
+                </ul>
+                <ul class="nav_responsive_ul">
+                    <div class="nav_responsive_button fa-solid fa-bars">
+                                </div>
+                    <div>
+                        <li class="nav_responsive_li"><i class="fa-solid fa-house"></i><a href="./pasteleria.html">INICIO</a></li>
+                        <li class="nav_responsive_li"><i class="fa-solid fa-rectangle-list"></i><a href="./menu-pasteleria.html">NUESTRO MENÚ</a></li>
+                        <li class="nav_responsive_li"><i class="fa-solid fa-receipt"></i><a href="./pedido.html">HACER PEDIDO</a></li>
+                        <li class="nav_responsive_li"><i class="fa-solid fa-utensils"></i><a href="./pastelero.html">SOY PASTELERO</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="centrar_logo">
+            <img id="logo" src="assets/img/logo.png" alt="Pasteleria Igor">
+        </div>
+        <h1 id="inicio-form">Crea el Pastel de tus sueños</h1>
+        <br>
+        <!--
+        -->
+        <h2>Selecciona el sabor del pan</h2>
+            <div class="select_pan" id="select_pan">
+                <ul class="ul_pan" id="ul_pan">
+                    <input type="checkbox" name="pan-chocolate" id="pan-chocolate" value="pan-chocolate"> Pan de Chocolate........................$150.00 <br>
+                    <input type="checkbox" name="pan-vainillla" id="pan-vainillla" value="pan-vainillla"> Pan de Vainilla.............................$150.00 <br>
+                    <input type="checkbox" name="pan-zanahoria" id="pan-zanahoria" value="pan-zanahoria"> Pan de Zanahoria....,,,,,,,,,,,,,,,,,,..$150.00 <br>
+                    <input type="checkbox" name="chocoflan" id="chocoflan" value="chocoflan"> Choco Flan....................................$200.00 <br>
+                    <input type="checkbox" name="cheesecake" id="cheesecake" value="cheesecake"> Cheesecake...................................$250.00 <br>
+                </ul>
+            </div>
+                <hr>
+            <h2>Selecciona el Topping o Decoración</h2>
+            <div class="select_topping" id="select_topping">
+                <ul class="ul_topping" id="ul_topping">
+                    <input type="checkbox" name="chispas-chocolate" id="chispas-chocolate" value="chispas-chocolate"> Chispas de Chocolate..................$20.00 <br>
+                    <input type="checkbox" name="mermelada-fresa" id="pmermelada-fresa" value="mermelada-fresa"> Mermelada de Fresa.....................$25.00 <br>
+                    <input type="checkbox" name="mermelada-piña" id="pmermelada-piña" value="mermelada-piña"> Mermelada de Piña.......................$30.00 <br>
+                    <input type="checkbox" name="mermelada-zarzamora" id="pmermelada-zarzamora" value="mermelada-zarzamora"> Mermelada de Zarzamora...........$35.00 <br>
+                    <input type="checkbox" name="frutas" id="frutas" value="frutas"> Frutas................................................$40.00 <br>
+                    <input type="checkbox" name="crema-pastelera" id="crema-pastelera" value="crema-pastelera"> Crema Pastelera............................$60.00 <br>
+                    <input type="checkbox" name="ferrero" id="ferrero" value="ferrero"> Ferrero Rocher................................$80.00 <br>
+                </ul>
+            </div>
+        <hr>
+        <h2>Sabor de Cobertura (Betún)</h2>
+        <div  class="container_betun" id="betun">
+            <select class="selected_betun">
+            <option value="chocolate">Selecciona una opción...</option>
+                <optgroup label="BASICO">
+                    <option value="chocolate">Chocolate.....................................$50.00</option>
+                    <option value="vainilla">Vainilla..........................................$50.00</option>
+                    <option value="crema-pastelera">Crema Pastelera..........................$60.00</option>
+                    <option value="fresa">Fresa............................................$70.00</option>
+                    <option value="durazno">Durazno........................................$70.00</option>
+                    <option value="zarzamora">Zarzamora....................................$80.00</option>
+                </optgroup>
+                <optgroup label="PREMIUM">
+                    <option value="moka">Moka...........................................$80.00</option>
+                    <option value="nutella">Nutella.........................................$90.00</option>
+                    <option value="fondant">Fondant.....................................$300.00</option>
+                </optgroup>
+            </select>
+        </div><br><br>
+        
+            <hr>
+            <!--
+                Tipo de envio
+            -->
+            <h2>¿Como te hacemos llegar el Pastel?</h2>
+                <div class="radio_envio">
+                    <input class="radio_tienda" type="radio" name="entrega" id="recoger" value="Recoger en tienda"><br>
+                    <label class="radio_tienda" for="recoger">Recoger en tienda</label><br>
+                    <input class="radio_envio" type="radio" name="entrega" id="envio" value="Envio a Domicilio"><br>
+                    <label class="radio_envio" for="envio">Envio a Domicilio (Costo extra de $30.00)</label>
+                </div><br><br>
+            <hr>
+            <!--
+                Formulario de Envio de datos de Cliente
+            -->
+            <fieldset class="form" id="form">
+                <legend><h2>Proporcionanos tus datos</h2></legend>
+                    <form action="">
+                        <label for="nombre">Nombre</label><br>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo"><br>
+                        <label for="direccion">Dirección de entrega<br>(Solo envios a domicilio)</label><br>
+                        <input type="text" id="direccion" name="direccion" placeholder="Escribenos tu dirección" required><br>
+                        <label for="tel">Telefono</label><br>
+                        <input type="tel" id="tel" name="telefono" placeholder="Número telefónico" minlength="10" maxlength="10" required> <br>
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="correo" autocomplete="on" placeholder="Escribe tu correo" required> <br>
+                        <label for="mensaje">Describenos el Pastel de tus sueños</label><br>
+                        <textarea name="mensaje" id="mensaje" rows="5" placeholder="Escribe aqui una descripción"></textarea>
+                    </form> 
+            </fieldset><br><br>
+
+                <input type="submit" value="Enviar mi Pedido" onclick="alert('Pedido Enviado Correctamente');"><br><br>
+                <input type="reset" value="Restaurar el Formulario" onclick="alert('Puedes volver a rellenar tu pedido');"><br><br>         
+                <a href="./pasteleria.html">
+                <button value="volvermenu">Volver al Menú</button></a><br><br>
+                
+                <div style="text-align: right;"><a href="#inicio-form"><button value="INICIO" style="position: static;">UP</button></a></div>
+                <br><br>
+   
+        <footer id="footer" class="wrapper style1-alt">
+            <div class="inner">
+                <ul class="menu">
+                    <li>Creado por: Omar Ventura Pérez &copy;Todos los derechos reservados.</li> <li>Diseño propio</li>
+                </ul>
+             </div>
+        </footer>
+    </body>
+
+    
+
+</html>
