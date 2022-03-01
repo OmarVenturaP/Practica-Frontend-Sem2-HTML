@@ -58,29 +58,29 @@
             <h2>Selecciona el Topping o Decoración</h2>
             <div class="select_topping" id="select_topping">
                 <ul class="ul_topping" id="ul_topping">
-                    <input type="checkbox" name="chispas-chocolate" id="chispas-chocolate" value="chispas-chocolate"> Chispas de Chocolate..................$20.00 <br>
-                    <input type="checkbox" name="mermelada-fresa" id="pmermelada-fresa" value="mermelada-fresa"> Mermelada de Fresa.....................$25.00 <br>
-                    <input type="checkbox" name="mermelada-piña" id="pmermelada-piña" value="mermelada-piña"> Mermelada de Piña.......................$30.00 <br>
-                    <input type="checkbox" name="mermelada-zarzamora" id="pmermelada-zarzamora" value="mermelada-zarzamora"> Mermelada de Zarzamora...........$35.00 <br>
-                    <input type="checkbox" name="frutas" id="frutas" value="frutas"> Frutas................................................$40.00 <br>
-                    <input type="checkbox" name="crema-pastelera" id="crema-pastelera" value="crema-pastelera"> Crema Pastelera............................$60.00 <br>
-                    <input type="checkbox" name="ferrero" id="ferrero" value="ferrero"> Ferrero Rocher................................$80.00 <br>
+                    <input type="checkbox" class="topping" name="chispas-chocolate" id="chispas-chocolate" value="chispas-chocolate"> Chispas de Chocolate..................$20.00 <br>
+                    <input type="checkbox" class="topping" name="mermelada-fresa" id="pmermelada-fresa" value="mermelada-fresa"> Mermelada de Fresa.....................$25.00 <br>
+                    <input type="checkbox" class="topping" name="mermelada-piña" id="pmermelada-piña" value="mermelada-piña"> Mermelada de Piña.......................$30.00 <br>
+                    <input type="checkbox" class="topping" name="mermelada-zarzamora" id="pmermelada-zarzamora" value="mermelada-zarzamora"> Mermelada de Zarzamora...........$35.00 <br>
+                    <input type="checkbox" class="topping" name="frutas" id="frutas" value="frutas"> Frutas................................................$40.00 <br>
+                    <input type="checkbox" class="topping" name="crema-pastelera" id="crema-pastelera" value="crema-pastelera"> Crema Pastelera............................$60.00 <br>
+                    <input type="checkbox" class="topping" name="ferrero" id="ferrero" value="ferrero"> Ferrero Rocher................................$80.00 <br>
                 </ul>
             </div>
         <hr>
         <h2>Sabor de Cobertura (Betún)</h2>
-        <div  class="container_betun" id="betun">
-            <select class="selected_betun">
-            <option value="chocolate">Selecciona una opción...</option>
-                <optgroup label="BASICO">
-                    <option value="chocolate">Chocolate.....................................$50.00</option>
-                    <option value="vainilla">Vainilla..........................................$50.00</option>
-                    <option value="crema-pastelera">Crema Pastelera..........................$60.00</option>
-                    <option value="fresa">Fresa............................................$70.00</option>
-                    <option value="durazno">Durazno........................................$70.00</option>
-                    <option value="zarzamora">Zarzamora....................................$80.00</option>
+        <div  class="container_betun" id="">
+            <select class="selected_betun" id="betun">
+            <option value="chocolate" id="">Selecciona una opción...</option>
+                <optgroup label="BASICO" id="">
+                    <option value="Chocolate">Chocolate.....................................$50.00</option>
+                    <option value="Vainilla">Vainilla..........................................$50.00</option>
+                    <option value="Crema Pastelera">Crema Pastelera..........................$60.00</option>
+                    <option value="Fresa">Fresa............................................$70.00</option>
+                    <option value="Durazno">Durazno........................................$70.00</option>
+                    <option value="Zarzamora">Zarzamora....................................$80.00</option>
                 </optgroup>
-                <optgroup label="PREMIUM">
+                <optgroup label="PREMIUM" id="">
                     <option value="moka">Moka...........................................$80.00</option>
                     <option value="nutella">Nutella.........................................$90.00</option>
                     <option value="fondant">Fondant.....................................$300.00</option>
@@ -105,29 +105,44 @@
             -->
             <fieldset class="form" id="form">
                 <legend><h2>Proporcionanos tus datos</h2></legend>
-                    <form action="">
+                    <form name="formcliente" action="">
                         <label for="nombre">Nombre</label><br>
-                        <input type="text" id="midato" name="nombre" placeholder="Escribe tu nombre completo"><br>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo"><br>
                         <label for="direccion">Dirección de entrega<br>(Solo envios a domicilio)</label><br>
-                        <input type="text" id="midato" name="direccion" placeholder="Escribenos tu dirección" required><br>
+                        <input type="text" id="direccion" name="direccion" placeholder="Escribenos tu dirección" required><br>
                         <label for="tel">Telefono</label><br>
-                        <input type="tel" id="midato" name="telefono" placeholder="Número telefónico" minlength="10" maxlength="10" required> <br>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Número telefónico" minlength="10" maxlength="10" required> <br>
                         <label for="email">Email</label><br>
-                        <input type="email" id="midato" name="correo" autocomplete="on" placeholder="Escribe tu correo" required> <br>
+                        <input type="email" id="correo" name="correo" autocomplete="on" placeholder="Escribe tu correo" required> <br>
                         <label for="mensaje">Describenos el Pastel de tus sueños</label><br>
-                        <textarea name="mensaje" id="midato" rows="5" placeholder="Escribe aqui una descripción"></textarea>
+                        <textarea name="mensaje" id="descripcion" rows="5" placeholder="Escribe aqui una descripción"></textarea>
                     </form> 
             </fieldset><br><br>
-
-                <button onclick="miFuncionCaptura()">Enviar mi pedido</button><br><br>
-                <div id="miDivRecibeInfo"></div>
-
-                <input type="reset" value="Restaurar el Formulario" onclick="alert('Puedes volver a rellenar tu pedido');"><br><br>         
-                <a href="./pasteleria.html">
-                <button value="volvermenu">Volver al Menú</button></a><br><br>
+            <div class="submit_button">
+                <a href="menu-pasteleria.html"><button value="volvermenu">Volver al Menú</button></a>
+                <button onclick="guardarDatos()"><b> Enviar Pedido</b></button>
+                <a href="#logo"><input type="reset" value="Restaurar el Formulario" onclick="alert('Puedes volver a rellenar tu pedido');"></a><br><br>         
+            </div>
+                
                 
                 <div style="text-align: right;"><a href="#inicio-form"><button value="INICIO" style="position: static;">UP</button></a></div>
                 <br><br>
+
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Pedido de Cliente</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody id="valores">
+                
+                    </tbody>
+                </table><br><br>
+
+                <script src="./js/function.js"></script>
+                <br><br>
+
    
         <footer id="footer" class="wrapper style1-alt">
             <div class="inner">
@@ -136,16 +151,5 @@
                 </ul>
              </div>
         </footer>
-        <script src="function.js" type="text/javascript">
-            function miFuncionCaptura() {
-                let miDatoInput = document.getElementById("midato").value;
-                let miDivHTML = '<p> ${miDatoInput} </p>';
-                document.getElementById("miDivRecibeInfo").innerHTML = miDivHTML;
-                
-                }
-        </script>
     </body>
-
-    
-
 </html>

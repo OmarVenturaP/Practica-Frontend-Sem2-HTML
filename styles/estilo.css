@@ -577,11 +577,39 @@
   .form {
     text-align: center;
   }
-  #nombre, #direccion, #tel, #email, #mensaje {
+  #nombre, #direccion, #telefono, #correo, #descripcion {
     width: 500px;
     max-width: 100%;
   }
+  .submit_button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .submit_button button {
+    margin-right: 150px;
+  }
 
+  table {
+    text-align: center;
+    border: 1px solid #0A0D41;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+  }
+  
+  td, th {
+    border: 1px solid #0A0D41;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+    ;
+  }
   /*FOOTER DE TODAS LAS PÁGINAS*/
   footer {
     text-align: center;
