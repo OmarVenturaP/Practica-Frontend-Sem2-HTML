@@ -107,19 +107,21 @@
                 <legend><h2>Proporcionanos tus datos</h2></legend>
                     <form action="">
                         <label for="nombre">Nombre</label><br>
-                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo"><br>
+                        <input type="text" id="midato" name="nombre" placeholder="Escribe tu nombre completo"><br>
                         <label for="direccion">Dirección de entrega<br>(Solo envios a domicilio)</label><br>
-                        <input type="text" id="direccion" name="direccion" placeholder="Escribenos tu dirección" required><br>
+                        <input type="text" id="midato" name="direccion" placeholder="Escribenos tu dirección" required><br>
                         <label for="tel">Telefono</label><br>
-                        <input type="tel" id="tel" name="telefono" placeholder="Número telefónico" minlength="10" maxlength="10" required> <br>
+                        <input type="tel" id="midato" name="telefono" placeholder="Número telefónico" minlength="10" maxlength="10" required> <br>
                         <label for="email">Email</label><br>
-                        <input type="email" id="email" name="correo" autocomplete="on" placeholder="Escribe tu correo" required> <br>
+                        <input type="email" id="midato" name="correo" autocomplete="on" placeholder="Escribe tu correo" required> <br>
                         <label for="mensaje">Describenos el Pastel de tus sueños</label><br>
-                        <textarea name="mensaje" id="mensaje" rows="5" placeholder="Escribe aqui una descripción"></textarea>
+                        <textarea name="mensaje" id="midato" rows="5" placeholder="Escribe aqui una descripción"></textarea>
                     </form> 
             </fieldset><br><br>
 
-                <input type="submit" value="Enviar mi Pedido" onclick="alert('Pedido Enviado Correctamente');"><br><br>
+                <button onclick="miFuncionCaptura()">Enviar mi pedido</button><br><br>
+                <div id="miDivRecibeInfo"></div>
+
                 <input type="reset" value="Restaurar el Formulario" onclick="alert('Puedes volver a rellenar tu pedido');"><br><br>         
                 <a href="./pasteleria.html">
                 <button value="volvermenu">Volver al Menú</button></a><br><br>
@@ -134,6 +136,14 @@
                 </ul>
              </div>
         </footer>
+        <script src="function.js" type="text/javascript">
+            function miFuncionCaptura() {
+                let miDatoInput = document.getElementById("midato").value;
+                let miDivHTML = '<p> ${miDatoInput} </p>';
+                document.getElementById("miDivRecibeInfo").innerHTML = miDivHTML;
+                
+                }
+        </script>
     </body>
 
     
