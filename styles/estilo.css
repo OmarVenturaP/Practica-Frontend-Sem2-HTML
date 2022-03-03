@@ -1,10 +1,3 @@
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 
  html {
     line-height: 1.15; /* 1 */
@@ -18,89 +11,26 @@
    * Remove the margin in all browsers.
    */
    * {
-     margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+   }
+   body {
     font-size: 18px;
-    font-family: 'Nunito', sans-serif;
-    color: #0A0D41;
+    font-family: 'Prompt', sans-serif;
+    color: black;
+    padding: 100px 20px 0;
+    text-shadow: #fff;
     /*background-color: #F6F6F6;*/
   }
-
-/* Header */
-/*Barra de Navegación preparada para ser Responsive*/
-
-.nav_responsive_ul {
-  display: none;
-  list-style-type: none
-}
-.nav_responsive_button {
-  text-align: right;
-  float: right;
-  font-size: 25px;
-  padding: 6px 20px;
-  margin-right: 25px;
-}
-.nav {
-  text-align: right;
-  background-color: darkslateblue;
-}
-
-.nav_li {
-  display: inline-block;
-  padding: 12px;
-  color: #fff;
-}
-.nav_li:hover > a {
-  color: #ccc;
-}
-.nav_li:hover > i {
-  color: #ccc;
-}
-.nav_li i {
-  color: #fff;
-  box-sizing: border-box;
-  text-align: right;
-  margin-right: 12px;
-}
-.nav_li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-@media only screen and (max-width: 800px) {
-  .nav_ul {
-    display: none;
-  }
-  .nav{
-    height: 37px;
-    width: 100%;
-    background-color: #69c;
-  }
-  .nav_responsive_ul {
-    display: block;
-    position: absolute;
-    width: 100%;
-    background-color: #7af;
-  }
-  
-}
-
-.header {
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-}
-
-
-
 /*encabezados*/
 
    h1 {
     font-family: 'Lobster', cursive;
-    text-shadow: 3px 3px 8px #989BD0;
+    text-shadow: 3px 3px 8px #ca9060;
     font-size: 3em;
     margin: 0.67em 0;
     text-align: center;
-    margin-top: 4px;
+    margin-top: -5px;
     margin-bottom: 2px;
   }
 
@@ -108,7 +38,7 @@
     text-align: center;
     margin: 5px;
     font-size: 20px;
-    text-shadow: 2px 2px 6px #989BD0;
+    text-shadow: 2px 2px 6px #ca9060;
   }
   
   h3 {
@@ -176,9 +106,13 @@
   /* Estilos de Párrafos, unicamente para PARRAFOS*/
  
   p {
+    text-align:justify;
     margin: 0 30px;
     font-size: 20px;
     font-style: italic;
+  }
+  .ubicanos {
+    text-align: center;
   }
   
   /* Text-level semantics
@@ -463,25 +397,195 @@
   
   /* Comienza Edición Realizada por usuario*/
   /*IMAGENES EN PAGINA PRINCIPAL Y LOGO DE PAGINAS ALTERNAS*/
+  .hero {
+    top: 0;
+    right: 0;
+    left: 0;  
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  #vid {
+    top: 60px;
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.5;
+  }
+  #logo {
+    color: #805c3f;
+  }
+  .logo_div {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+  }
+  .igor_div {
+    position: absolute;
+    display: block;
+    margin-top: 8%;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .vid_div{
+    max-width: 100%;
+    width: 100%;
+  }
+  .datos {
+    position: static;
+    margin-top: 50px;
+  }
+  
+  .bg_img1 {
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    margin-top: -120px;
+    width: 100%;
+    height: 130%;
+    position: fixed;
+    z-index: -5;
+    opacity: 0.3;
+    display: none;
+  }
+  .fas {
+    margin-top: 120px;
+    margin-left: 49%;
+    margin-right: 49%;
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    position: relative;
+    color: #ca9060;
+    animation-name: movimiento;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    
+    z-index: -1;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+ .div_scroll {
+    margin-top: 190px;
+    text-align: center;
+    opacity: 0;
+  }
+
+  @keyframes movimiento {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+      transition-duration: 3s;
+    }
+
+  }
+
+/* Responsive bg, hero*/
+@media (max-width: 790px) {
+    .hero {
+      top: 20px;
+    }
+    .bg_img {
+      margin-left: 0;
+      margin-right: 0;
+      display: block;
+      margin-top: -120px;
+      width: 100%;
+      height: 130%;
+      position: fixed;
+      z-index: -5;
+      opacity: 0.3;
+    }
+    #vid {
+      top: 20px;
+      left: 0;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      z-index: -2;
+    }
+    .secundary_pages_starter {
+      position: relative;
+      display: list-item
+    }
+    
+  .igor_div {
+    position: absolute;
+    display: block;
+    margin-top: -5%;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+    .logo_div {
+      margin-top: -130px;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      position: relative;
+      z-index: -1;
+    }
+    
+  .fas {
+    margin-top: 140px;
+    margin-left: 49%;
+    margin-right: 49%;
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    position: relative;
+    color: #ca9060;
+    animation-name: movimiento;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    
+    z-index: -1;
+  }
+  }
+
   .img {
     justify-content: center;
     text-align: center;
-    width: 600px;
+    width: 400px;
     margin-left: 20px;
     border-style: none;
     max-width: 100%;
     border-radius: 20%;
-    box-shadow: 3px 3px 20px #989BD0;
+    box-shadow: 3px 3px 20px #ca9060;
   }
-  .centrar_logo {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 250px;
+  
+  .igor_div {
+    position: absolute;
+    display: block;
+    top: 14%;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
   }
+  .link_menu_p {
+    text-decoration: none;
+  }  
   .nuestro_menu {
     color: #fff;
     font-size: 25px;
@@ -507,11 +611,11 @@
   }
 
   /* MENU CON IMAGENES */
-  .ferrero_betun, .fruta_topping, .pan_vainilla {
-    position: relative;
-    width: 150px;
-  }
- 
+
+ .pan {
+   display: block;
+   width: 70%;
+ }
   
   @media only screen and (max-width: 800px) {
     .fruta_topping {
@@ -529,22 +633,16 @@
   
   /*PAGINA DE FORMULARIO DE ENVIO DE CLIENTE*/
 
-  .select_pan {
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 97%;
-  }
+
   .ul_topping {
-    display: block justify;
+    display: block;
     text-align: justify;
     margin-left: 5px;
     margin-right: 5 px;
 
   }
-  .select_topping {
+  .select_topping, .select_pan {
+    width: 500px;
     display: flex;
     justify-content: center;
     margin-left: auto;
@@ -589,21 +687,32 @@
   .submit_button button {
     margin-right: 150px;
   }
+  .pedido_js {
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 
+    80px;
+  }
 
-  table {
+  .table {
     text-align: center;
     border: 1px solid #0A0D41;
     margin-left: auto;
     margin-right: auto;
     font-family: Arial, sans-serif;
     border-collapse: collapse;
-    width: 60%;
+    width: 100%;
+    position: relative;
+    z-index: -1;
   }
   
   td, th {
     border: 1px solid #0A0D41;
     text-align: center;
-    padding: 8px;
+    padding: 2px;
   }
   
   tr:nth-child(even) {
@@ -611,21 +720,147 @@
     ;
   }
   /*FOOTER DE TODAS LAS PÁGINAS*/
-  footer {
+  .footer {
+    position: absolute;
     text-align: center;
-    background-color: #989BD0 ;
+    background-color: #ca9060d2 ;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
   .copyright li {
-    vertical-align: middle;
     text-align: center;
-    height: 40px;
     max-width: 100%;
-    display: inline-block;
+    display: block;
     list-style-type: none;
-    margin: 20px;
-    margin-top: 35px;
+    margin-top: 20px;
   }
   li {
     text-size-adjust: center;
     text-align: justify;
   }
+
+  
+/* Header */
+/*Barra de Navegación preparada para ser Responsive*/
+
+.header {
+  background-color: rgb(116, 46, 0);
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  justify-content: right;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+}
+.link-text {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.link-text:hover,
+.link-text_active {
+  background-color: #ca9060;
+  transition: 0.5s;
+  
+}
+.nav_ul {
+  margin-top: 0;
+  display: flex;
+  margin-right: 10px;
+  list-style: none;
+}
+
+.nav_li {
+  margin: 0 10px;
+  display: flex;
+  padding: 12px;
+  line-height: 20px;
+  width: max-content;
+}
+
+.nav_button {
+  color: #fff;
+  width: 70px;
+  background: none;
+  border: none;
+  padding: 10px  20px 10px;
+  line-height: 20px;
+  display: none;
+}
+
+/*Responsive Design - Mobiles Devices */
+@media (max-width: 790px) {
+  .header {
+    height: 40px;
+  }
+  .nav_ul {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    list-style: none;
+    background-color: #ca9060e8;
+    position: fixed;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    padding: 20px 0 0 0;
+    margin-bottom: 0;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.3s;
+  }
+  .nav_li {
+    line-height: 40px;    
+  }
+  .link-text:hover,
+  .link-text_active {
+    background-color: rgb(100, 42, 3);
+    transition: 0.5s;
+  }
+
+  .nav_button {
+    display: block;
+  }
+  .nav_ul_visible {
+    left: 0;
+  }
+  .nav_button:focus:not(:focus-visible){
+    outline: none;
+  }
+  
+  .footer {
+    vertical-align: middle;
+    height: 40px;
+    font-size: 14px;
+    position: absolute;
+    display: block;
+    background-color: #ca9060 ;
+    bottom: 0;
+  }
+  .copyright {
+    display: block;
+    margin-bottom: 7px;
+  }
+  .copyright li {
+    display: block;
+    text-align: center;
+    list-style-type: none;
+  }
+  .pedido_button {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+}
